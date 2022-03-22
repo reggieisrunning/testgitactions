@@ -1,4 +1,5 @@
 name: GitHub Manual Action
+on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
