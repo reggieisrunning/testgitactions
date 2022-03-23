@@ -9,8 +9,9 @@ jobs:
   test-expressions-functions:
     runs-on: ubuntu-latest
     steps:
-      - env:
-          xx: format('{{Hello {0} {1} {2}!}}', 'Mona', 'the', 'Octocat')
-          yy: join(github.event.issue.labels.*.name, ', ')
       - run: echo $xx
+        env:
+          xx: format('{{Hello {0} {1} {2}!}}', 'Mona', 'the', 'Octocat')
       - run: echo $yy
+        env:
+          yy: join(github.event.issue.labels.*.name, ', ')
