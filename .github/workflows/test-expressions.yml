@@ -5,7 +5,7 @@ jobs:
     name: test-expressions-literals
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ false }}
+      - run: echo ${{ github.event }}
   test-expressions-functions:
     runs-on: ubuntu-latest
     steps:
