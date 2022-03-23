@@ -11,7 +11,7 @@ jobs:
     steps:
       - run: echo $xx
         env:
-          xx: format('{{Hello {0} {1} {2}!}}', 'Mona', 'the', 'Octocat')
+          xx: ${{ format('{{Hello {0} {1} {2}!}}', 'Mona', 'the', 'Octocat') }}
       - run: echo $yy
         env:
-          yy: join(github.event.issue.labels.*.name, ', ')
+          yy: ${{ join(github.event.issue.labels.*.name, ', ') }}
