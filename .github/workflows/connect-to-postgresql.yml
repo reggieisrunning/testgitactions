@@ -1,9 +1,0 @@
-name: connect-to-postgresql
-on: [push]
-jobs:
-    test-job:
-      - name: Connect to PstgreSQL
-        run: node client.js
-        env:
-          POSTGRES_HOST: postgres
-          POSTGRES_PORT: 5432

@@ -1,0 +1,12 @@
+name: test-expressions
+on: [push]
+jobs:
+  test-expressions-literals:
+    name: test-expressions-literals
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ false }}
+  test-expressions-functions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: join(github.event.issue.labels.*.name, ', ')
