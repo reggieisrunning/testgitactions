@@ -22,5 +22,3 @@ jobs:
         run: echo '${{ toJSON(strategy) }}'
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
-      - name: Dump github eventa
-        run: echo '${{ toJson(github.event) }}'
