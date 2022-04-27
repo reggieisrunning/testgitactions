@@ -5,6 +5,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
+      - run: exit 1
       - run: echo "Deploying to production server on branch $GITHUB_REF"
       - name: Dump GitHub context
         id: github_context_step
